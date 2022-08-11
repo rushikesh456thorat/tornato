@@ -1,0 +1,161 @@
+@media only screen and (max-device-width:480px) {
+.navbar
+{
+   position:relative;
+  height: 40px;
+  margin-bottom: 0px;
+  width: 100%;
+  border: 10px solid transparent;
+  background-color:gray;
+  
+
+}
+body
+{
+  margin: 0 0 0 0;
+  background-color: #e9ebee;
+  
+  
+}
+
+.navbar a{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding-left: 100px;
+  text-decoration: none;
+  font-size: 15px;
+}
+.navbar-2
+{
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  width: 300px;;
+  flex-direction: row;
+  justify-content: left;
+}
+p{
+    font-size: 10px;
+}
+.search-box-div
+{
+  
+  margin-top: 10px;
+  width: 600px;
+  display: flex;
+  border-color: transparent;
+  justify-content: left;
+
+}
+
+.search-box
+{
+  position: relative;
+  width:300px;
+  height: 45px;
+  font-size: 16px;
+  border-color: aquamarine;
+  border-radius: 15px;
+  
+  
+}
+.container
+  {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: center;
+  }
+.main-content
+{
+  background-color: whitesmoke;
+  height: 100%;
+  display: flex;
+  width: 1070px;
+  padding: 10px;
+  border-radius: 15px;
+  flex-direction: column;
+}
+h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  color: rgb(11, 63, 90);
+  
+}
+h5{
+  font-family: Arial, Helvetica, sans-serif;
+}
+h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  font-size: 8px;
+}
+.book-shelf
+{
+
+   width: 90%;
+   height: 500px;
+   
+   
+}
+.bookInfoContainer
+{
+ position: relative;
+ margin-left: 7px;
+
+  height: 110px;
+  background-color: #b8bec8;
+  border-radius: 15px;
+  display: flex;
+  flex-direction:row;
+  cursor:pointer;
+  margin-right: 10%;
+
+}
+.bookInfoContainer img{
+  height: 100px;
+  width: 100px;
+  position: relative;
+  margin: 5px;
+  border-radius: 10px;
+  
+}
+.book-Info{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.book{
+  margin-top: 10px;
+}
+.book-list li a{
+  display: block;
+}
+.loader {
+  border: 9px solid #f3f3f3; /* Light grey */
+  border-top: 9px solid gray; /* Blue */
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  animation: spin 2s linear infinite;
+  margin-left: 0px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.errorMessage
+{
+  margin-left: 0px;
+}
+.footer-distributed{
+  display: none;
+}
+}
