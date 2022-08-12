@@ -180,6 +180,15 @@ p{
 .errorMessage
 {
   margin-left: 350px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.errorMessage img{
+  height: 300px;
+  width: 300px;
+ 
 }
 .footer-distributed
 {
@@ -258,4 +267,16 @@ p{
 .social-links
 {
   margin-left: 90px;
+}
+.refresh-button
+{
+  height: 40px;
+  width: 90px;
+  background-color: transparent;
+  border-radius: 9px;
+  border-width: 1.5px;
+  border-color: #0190ff;
+  padding: 0px;
+  cursor: pointer;
+  margin-left: 100px;
 }
