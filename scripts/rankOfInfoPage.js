@@ -26,11 +26,10 @@ $.ajax({
     }
     $.each(data, function(key, value) {
       
-        console.log(articalNameInPage)
-     
+      
         
-     if(articalNameInPage != value.articalname.toUpperCase() )
-      {  let infoDiv= document.createElement("div")
+        
+        let infoDiv= document.createElement("div")
 
 
        let anchor = document.createElement("a")
@@ -47,10 +46,12 @@ $.ajax({
        artical.id="articalName"
        
        let date = document.createElement("p")
+       date.style="width: 50px;"
        let dateNode =  document.createTextNode(value.date)
        date.appendChild(dateNode)
 
        let dot = document.createElement("p")
+       dot.style="width: 10px;"
        let dotNode =  document.createTextNode("•")
        dot.appendChild(dotNode)
        
