@@ -1,4 +1,0 @@
-const Refresh = () =>{
-  
-    location.reload()
-}
