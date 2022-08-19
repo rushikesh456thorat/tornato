@@ -1,0 +1,185 @@
+@font-face {
+    font-family: capriola;
+    src: url(Capriola.ttf)
+  }
+
+body{
+     
+     margin: 0px;
+     padding: 0px;
+     display: flex;
+     flex-direction: column;
+     align-content: center;
+
+}
+.menu-button
+ {
+        display: none;
+}
+.nav-header{
+
+    position: fixed;
+    background-color: rgb(255, 170, 0);
+    height: 80px;
+    width:100%;
+    border-color: rgb(0, 0, 0);
+    border-bottom-width: 10px;
+    display: flex;
+    flex-direction: row;
+
+}
+.logo
+{
+    height: 40px;
+    width: 40px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+h2{
+
+    font-size: 26px;
+   color: black;
+    font-family: capriola;
+}
+
+  .list-of-tabs
+  {
+    display: flex;
+    flex-direction: row;
+  }
+
+.list-of-tabs li{
+
+    list-style: none;
+    margin-left: 35px;
+
+}
+li a{
+
+    text-decoration-line: none;
+    color: black;
+    font-weight: 100;
+    justify-content: center;
+    display: flex;
+    font-family: capriola;
+    
+}
+
+li hr{
+
+    height: 1px;
+    border: 0px;
+    width: 100px;
+    background-color:whitesmoke;
+
+}
+.donate-button
+{
+    border: 0px;
+    background-color: black;
+    font-family:capriola;
+    height: 50px;
+    color: white;
+    align-self: center;
+    margin-left: 40%;
+    width: 150px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+@media only screen and (max-device-width:480px) {
+
+
+  
+    .fa{
+        margin: 0px;
+    }
+    .nav-header{
+
+        position: relative;
+        background-color: rgb(255, 170, 0);
+        height: 80px;
+        width:700px;
+        border-color: rgb(0, 0, 0);
+        border-bottom-width: 10px;
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .logo
+    {
+        height: 40px;
+        width: 40px;
+        margin-bottom: 0px;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    h2{
+    
+        margin-top: 30px;
+        font-size: 26px;
+       color: black;
+        font-family: capriola;
+    }
+    .nav-header-sticky {
+        position: fixed;
+        background-color: rgb(255, 170, 0);
+        height: 80px;
+        width:100%;
+        border-color: rgb(0, 0, 0);
+        border-bottom-width: 10px;
+        display: flex;
+        flex-direction: row;
+      }
+      
+    
+    .sticky + .content {
+        padding-top: 102px;
+      }
+      .list-of-tabs
+      {
+        display: flex;
+        flex-direction: row;
+      }
+    
+    .list-of-tabs li{
+    
+        display: none;
+        list-style: none;
+        margin-left: 35px;
+    
+    }
+    li a{
+    
+        text-decoration-line: none;
+        color: black;
+        font-weight: 100;
+        justify-content: center;
+        display: flex;
+        font-family: capriola;
+        
+    }
+    
+    li hr{
+    
+        height: 1px;
+        border: 0px;
+        width: 100px;
+        background-color:whitesmoke;
+    
+    }
+    .donate-button
+    {
+        
+        font-size: 18px;
+        background-color: black;
+        font-family:capriola;
+        height: 60px;
+        color: white;
+        align-self: center;
+        margin-left: 300px;
+        width: 150px;
+        border-radius: 35px;
+        cursor: pointer;
+    }
+
+}

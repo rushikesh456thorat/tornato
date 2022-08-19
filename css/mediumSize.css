@@ -1,0 +1,31 @@
+@media (min-width: 744px) and (max-width: 1355px)
+{
+.donate-button
+{
+    border: 0px;
+    background-color: black;
+    font-family:capriola;
+    height: 50px;
+    color: white;
+    align-self: center;
+    margin-left: 5%;
+    width: 150px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.navbar div{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 30px;
+    
+    
+}
+.content
+{
+    width: 700px;
+}
+
+
+}
