@@ -1,7 +1,7 @@
 @media only screen and (max-device-width:480px) {
 
     body{
-        width: 700px;
+        width: 800px;
         height: 100%;
     }
     .navbar div{
@@ -79,6 +79,10 @@
         margin-top: 35px;
         border-radius: 15px;
         
+    }
+    .artical-box
+    {
+        margin-left: 20px;
     }
     .about-us
     {
