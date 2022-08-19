@@ -29,7 +29,8 @@ $.ajax({
       
         
         
-        let infoDiv= document.createElement("div")
+       if(articalNameInPage != value.articalname.toUpperCase() )
+      { let infoDiv= document.createElement("div")
 
 
        let anchor = document.createElement("a")
