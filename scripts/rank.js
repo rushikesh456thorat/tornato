@@ -22,7 +22,7 @@ $.ajax({
     }
     $.each(data, function(key, value) {
       
-     console.log(value.imagesource)
+     
         
         
         let infoDiv= document.createElement("div")
