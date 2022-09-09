@@ -148,6 +148,10 @@ li hr{
         margin-left: 35px;
     
     }
+    .list-of-tabs hr
+    {
+        display: none;
+    }
     li a{
     
         text-decoration-line: none;
