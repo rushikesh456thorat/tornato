@@ -1,73 +1,97 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let allNamesElm = document.getElementById("artical-list");
+let allNamesElm = document.getElementById("artical-list")
 
-    function setErrorDisplay() {
-        allNamesElm.innerHTML = "<p style='color: red;'>Failed to load articles. Please try again later.</p>";
+
+let onlyGiveTwo = new Boolean();
+let n = new Int16Array();
+n=0;
+
+onlyGiveTwo = true;
+function setErrorDisplay(){
+  
+}
+
+$.ajax({
+    // http may be used instead of https if required
+    url: "https://sheetlabs.com/MRE/tornatoDatabase",
+    crossDomain : false,
+  })
+  .done(function(data) {
+    if (data.length == 0) {
+        setErrorDisplay()
+      return;
     }
+    $.each(data, function(key, value) {
+      
+     
+        
+        
+        let infoDiv= document.createElement("div")
 
-    fetch("https://sheetlabs.com/MRE/tornatoDatabase")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (!data.length) {
-                setErrorDisplay();
-                return;
-            }
 
-            data.forEach(value => {
-                let articalBox = document.createElement("div");
-                articalBox.classList.add("artical-box");
+       let anchor = document.createElement("a")
+       anchor.href= value.link
+       
 
-                let anchor = document.createElement("a");
-                anchor.href = value.link;
-                anchor.target = "_blank"; // Open in new tab
+       let articalSpan = document.createElement("span")
+       articalSpan.display="inline"
 
-                let image = document.createElement("img");
-                image.src = value.imagesource;
-                image.alt = "Article Image";
 
-                let articalSpan = document.createElement("div");
-                articalSpan.classList.add("article-content");
+       let artical = document.createElement("h2")
+       let articalNode = document.createTextNode(value.articalname)
+       artical.appendChild(articalNode)
+       artical.id="articalName"
+       
+       let date = document.createElement("p")
+       date.style="width: 50px;"
+       let dateNode =  document.createTextNode(value.date)
+       date.appendChild(dateNode)
 
-                let artical = document.createElement("h2");
-                artical.textContent = value.articalname;
+       let dot = document.createElement("p")
+       dot.style="width: 10px;"
+       let dotNode =  document.createTextNode("•")
+       dot.appendChild(dotNode)
+       
+       let readTime = document.createElement("p")
+       let readTimeNode= document.createTextNode(value.readtime + " min read")
+       readTime.appendChild(readTimeNode)
 
-                let description = document.createElement("p");
-                description.textContent = value.description;
+       let description = document.createElement("p")
+       let descriptionNode = document.createTextNode(value.description)
+       description.appendChild(descriptionNode)
+      
+       
 
-                let infoDiv = document.createElement("div");
-                infoDiv.classList.add("info");
+      
+       
+       let image = document.createElement("img")
+       image.src= new URL(value.imagesource)
+       
+       
+       let articalBox = document.createElement("div")
+       articalBox.id = "artical-box"
+       articalBox.classList.add("artical-box")
+       
+       infoDiv.appendChild(date)
+       infoDiv.appendChild(dot)
+       infoDiv.appendChild(readTime)
+ 
+       articalBox.appendChild(articalSpan)
 
-                let date = document.createElement("p");
-                date.textContent = value.date;
+       articalSpan.appendChild(artical)
+       articalSpan.appendChild(description)
+       articalSpan.appendChild(infoDiv)
+      
+       anchor.appendChild(articalSpan)
+       anchor.appendChild(image)
 
-                let dot = document.createElement("span");
-                dot.textContent = " • ";
-
-                let readTime = document.createElement("p");
-                readTime.textContent = `${value.readtime} min read`;
-
-                infoDiv.appendChild(date);
-                infoDiv.appendChild(dot);
-                infoDiv.appendChild(readTime);
-
-                articalSpan.appendChild(artical);
-                articalSpan.appendChild(description);
-                articalSpan.appendChild(infoDiv);
-
-                anchor.appendChild(articalSpan);
-                anchor.appendChild(image);
-
-                articalBox.appendChild(anchor);
-                allNamesElm.appendChild(articalBox);
-            });
-        })
-        .catch(error => {
-            console.error("Error fetching data:", error);
-            setErrorDisplay();
-        });
-});
+       
+       articalBox.appendChild(anchor)
+       
+      
+       allNamesElm.appendChild(articalBox)
+       
+    });
+  })
+  .fail(function() {
+    setErrorDisplay()
+  });
